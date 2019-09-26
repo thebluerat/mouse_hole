@@ -27,7 +27,7 @@
         <div class = "subject">
             <div class = "login">
                 <img src = "./resources/img/bluemouse.png" alt = "mouseimage" class = "bluemouse">
-                <button type = "button" class = "loginbutton">LOGIN</button>
+                <button type = "button" class = "loginbutton" onclick = "location.href = 'login'">LOGIN</button>
             </div>
         </div>
         
