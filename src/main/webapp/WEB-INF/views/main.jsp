@@ -24,14 +24,13 @@
     </head>
     
     <body>
-        <div class = "subject">
+        <div class = "subject"></div>
+        <canvas id="canvas"></canvas>
             <div class = "login">
-                <img src = "./resources/img/bluemouse.png" alt = "mouseimage" class = "bluemouse">
+                <img src = "./resources/img/bluemouse2.png" alt = "mouseimage" class = "bluemouse">
                 <button type = "button" class = "loginbutton" onclick = "location.href = 'login'">LOGIN</button>
             </div>
-        </div>
         
-        <canvas id="canvas"></canvas>
         
         <div class = "footer">Come In</div>
         

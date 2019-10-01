@@ -37,9 +37,7 @@ public class LoginController {
 	@RequestMapping("/logout")
 	public String logout(HttpServletRequest req, HttpServletResponse res) throws IOException {
 		String key = req.getParameter("key");
-		String url = "https://kapi.kakao.com/v1/user/logout";
-		HashMap<String, Object> resultMap = HttpUtil.getUrl2(url, key);
-		System.out.println(resultMap);
+		
 		return "redirect:/";
 	}
 	
