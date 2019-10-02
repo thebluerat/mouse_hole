@@ -117,7 +117,7 @@ function snowinit() {
     init();
 }
 
-function snowinit() {
+function snowinit2() {
     (function() {
         var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame ||
         function(callback) {
