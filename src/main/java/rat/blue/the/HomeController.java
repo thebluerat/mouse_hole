@@ -19,11 +19,23 @@ public class HomeController {
 	
 	@Autowired
 	SqlSession session;
-	
+
 	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String home() {
+	public String main() {
 		
 		return "main";
+	}
+	
+	@RequestMapping(value = "/room", method = RequestMethod.GET)
+	public String room() {
+		
+		return "room";
+	}
+	
+	@RequestMapping(value = "/draw", method = RequestMethod.GET)
+	public String draw() {
+		
+		return "draw";
 	}
 	
 }

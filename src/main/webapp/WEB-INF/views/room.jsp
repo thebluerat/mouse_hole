@@ -1,14 +1,16 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+<html lang="ko"></html>
 <html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>쥐집</title>
-    <link rel="stylesheet" href = "../css/room.css">
+    <link rel="stylesheet" href = "./resources/css/room.css">
     <link href="https://fonts.googleapis.com/css?family=Mansalva&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="../js/snow2.js"></script>
+    <script src="./resources/js/snow2.js"></script>
     
     
         
@@ -24,14 +26,28 @@
         </script>
 </head>
 <body>
-
     <div class = "wall">
+
         <div class = "front">
-                <span style="font-size:15px;cursor:pointer" onclick="openNav()">커튼</span>
+            <div onclick="openNav()" class = "triangle-down">
+                <div class="dot"></div>
+                <div class="dot2"></div>
+                <div class="dot"></div>
+                <div class="dot2"></div>
+            </div>
+            <div onclick="openNav()" class = "triangle-up">
+                <div class="dot"></div>
+                <div class="dot2"></div>
+                <div class="dot"></div>
+                <div class="dot2"></div>
+            </div>
+            
+                
                 <div class = "frame" style="opacity: 0;"></div>
                 <div class = "frame">
                     
                     <div class = "outside">
+                      
                         <canvas id="canvas2">
                                 
                         </canvas>
@@ -40,6 +56,9 @@
                 <div class = "frame">
                     <div class = "outside"><canvas id="canvas3"></canvas></div>
                 </div>
+
+                <img src = "./resources/img/sleepingmouse.png" alt = "sleepingmouse" class = "mouse">
+
         </div>
         
     </div>
@@ -54,14 +73,15 @@
     }
 
     .overlay {
-    height: 100%;
+    height: 40%;
     width: 0;
     position: fixed;
     z-index: 2;
-    top: 0;
-    left: 0;
+    top: 16%;
+    left: 30%;
+    opacity: 0.5;
     background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0, 0.9);
+    background-color: rgb(199, 219, 128);
     overflow-x: hidden;
     transition: 0.5s;
   }
@@ -69,15 +89,18 @@
   .overlay-content {
     position: relative;
     top: 25%;
-    width: 100%;
+    width: 20%;
     text-align: center;
     margin-top: 30px;
+    margin: auto;
+    
   }
   
   .overlay a {
     padding: 8px;
     text-decoration: none;
-    font-size: 36px;
+    font-size: 15px;
+    margin: auto;
     color: #818181;
     display: block;
     transition: 0.3s;
@@ -94,6 +117,7 @@
     font-size: 60px;
   }
   
+  
 
     </style>
     </head>
@@ -102,10 +126,9 @@
     <div id="myNav" class="overlay">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
       <div class="overlay-content">
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Clients</a>
-        <a href="#">Contact</a>
+        <a href="#">그리기</a>
+        <a href="#">로그아웃</a>
+        
       </div>
     </div>
     
@@ -114,7 +137,7 @@
     
     <script>
     function openNav() {
-      document.getElementById("myNav").style.width = "100%";
+      document.getElementById("myNav").style.width = "40%";
     }
     
     function closeNav() {
@@ -125,6 +148,12 @@
     </body>
     </html>
 
-    <div class = "floor"></div>
+
+    
+
+    <div class = "floor">
+
+
+    </div>
 </body>
 </html>
