@@ -5,60 +5,52 @@
         
         <script>
             $(document).ready(function(){
-                var cnvs = document.getElementById('cnvs');
-                if(cnvs.getContext){
-                    var ctx = cnvs.getContext('2d');
-                    var isDraw = false;
-                    
-                    var dot = 1;
-                    var color = 'rgb(0, 0, 0)';
-                    
-                    $('#dot').bind('change', function(){dot = $('#dot').val();});
-                    $('#color').bind('change', function(){color = $('#color').val();});
-                    
-                    cnvs.onmousemove = function(e){
-                        if(isDraw) draw(e);
-                    }
-                    cnvs.onmousedown = function(e){
-                        if(e.button === 0){
-                            isDraw = true;
-                            draw(e);
-                        }
-                    }
-                    cnvs.onmouseup = function(e){
-                        isDraw = false;
-                    }
-                    
-                    function draw(e){
-                        ctx.fillStyle = color;
-                        ctx.fillRect(e.offsetX, e.offsetY, dot, dot);
-                    }
-                    
-                }else {
-                    alert('canvas가 지원되지 않는 브라우저입니다. 구글 크롬을 권장합니다.');
-                    return;
-                }
-                
-                var strDataURI = oCanvas.toDataURL();  
+            	/**
+            	 * 
+            	 */
 
-var oCanvas = document.getElementById("thecanvas");  
-  
-Canvas2Image.saveAsPNG(oCanvas);
-  
-Canvas2Image.saveAsJPEG(oCanvas);
-  
-  
-Canvas2Image.saveAsBMP(oCanvas);
-  
-  
+            	var points=new Array(),
+            	    colorInput = document.getElementById("color");
 
-var oImgPNG = Canvas2Image.saveAsPNG(oCanvas, true);   
-  
-  
-var oImgJPEG = Canvas2Image.saveAsJPEG(oCanvas, true);   
-  
+            			function start(e){
+            			  var mouseX = e.pageX - canvas.offsetLeft;
+            			  var mouseY = e.pageY - canvas.offsetTop;
+            			  paint = true;
+            			  ctx.beginPath();
+            			  ctx.moveTo(mouseX,mouseY);
+            			  points[points.length]=[mouseX,mouseY];
+            			};
 
-var oImgBMP = Canvas2Image.saveAsBMP(oCanvas, true);   
+            			function draw(e){
+
+            			  if(paint){
+            				 var mouseX = e.pageX - canvas.offsetLeft;
+            				 var mouseY = e.pageY - canvas.offsetTop; 
+            				 ctx.lineTo(mouseX,mouseY);
+            				 ctx.stroke();	
+            				 ctx.strokeStyle = colorInput.value;
+            				 ctx.lineJoin = ctx.lineCap = 'round';
+
+            				 points[points.length]=[mouseX,mouseY];
+            			  }
+            			  
+            			}
+            			function stop(e){
+            			  paint=false;
+            			 var s=JSON.stringify(points);
+            				localStorage['lines']=s;
+            			}  
+            		
+
+            			
+            			var paint=false;
+            			var canvas = document.getElementById('cnvs');
+            			var ctx=canvas.getContext("2d");
+            			canvas.addEventListener('mousedown',start);
+            			canvas.addEventListener('mousemove',draw);
+            			canvas.addEventListener('mouseup',stop);
+            		
+            			
 
 
 
@@ -85,33 +77,12 @@ var oImgBMP = Canvas2Image.saveAsBMP(oCanvas, true);
                 </select>
                 &nbsp;
                 
-            <select id = "color">
-                <option value = "rgb(0, 0, 0)">black</option>
-                <option value = "rgb(255, 0, 0)">red</option>
-                <option value = "rgb(0, 255, 0)">green</option>
-                <option value = "rgb(0, 0, 255)">blue</option>
-                <option value = "rgb(255, 255, 0)">yellow</option>
-                <option value = "rgb(255, 255, 255)">white</option>
-                <option value = "rgb(214, 110, 110)">�쁾�� �뙠�깋</option>
-                <option value = "rgb(44, 21, 21)">遺됱� 寃��젙�깋</option>
-                <option value = "rgb(250, 194, 146)">�궡援ъ깋</option>
-                <option value = "rgb(5, 85, 165)">遺��뱶�윭�슫 �궓�깋</option>
-                <option value = "rgb(30, 83, 196)">遺��뱶�읇怨좊룄 吏꾪븳 �궓�깋</option>
-                <option value = "rgb(42, 157, 86)">遺��뱶�윭�슫 �끃�깋</option>
-                <option value = "rgb(95, 144, 193)">泥�諛붿��깋</option>
-                <option value = "rgb(20, 47, 74)">泥�諛붿� 洹몃┝�옄�깋</option>
-                <option value = "rgb(193, 163, 0)">梨� �몴吏��깋</option>
-                <option value = "rgb(187, 190, 175)">梨� 洹몃┝�옄�깋</option>
-                <option value = "rgb(86, 229, 255)">�뀒�몢由ъ깋</option>
-                
-                <form>
-				 가장 좋아하는 색깔 선택 
-				  <input type='color' id='myBestColor' value='#0000ff'>
-				</form>
-            </select>        
+				  <input type="color" id="color" value="Color">
+				
+                  
             
         </div>
     </div>
-        
+        <script type="text/javascript" src="draw.js"></script> 
     </body>
 </html>
