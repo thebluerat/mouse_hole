@@ -15,6 +15,7 @@ var points=new Array(),
 		};
 
 		function draw(e){
+			
 			ctx.lineWidth = dot.value;
 			cnvs.onmousedown = function(e){
                 if(e.button === 0){
@@ -59,6 +60,7 @@ var points=new Array(),
 		var paint=false;
 		var canvas = document.getElementById('cnvs');
 		var ctx=canvas.getContext("2d");
+		
 		canvas.addEventListener('mousedown',start);
 		canvas.addEventListener('mousemove',draw);
 		canvas.addEventListener('mouseup',stop);

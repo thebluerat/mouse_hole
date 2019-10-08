@@ -1,13 +1,15 @@
 html, body { margin: 0; padding: 0;}
 
 .mousecanvas {
-	
 	border: 25px outset #8080c0;
-	
 }
 
 .wholeframe {
 	margin: 0px auto;
  	text-align: center;
+}
+
+.thickness {
+	
 }
 

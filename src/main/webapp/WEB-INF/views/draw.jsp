@@ -35,7 +35,7 @@
             
             <div>
             		두께
-                <select id = "dot" class = "">
+                <select id = "dot" class = "thickness">
                     <option value = "1">1px</option>
                     <option value = "2">2px</option>
                     <option value = "3">3px</option>
@@ -81,8 +81,14 @@
                 </select>
                 &nbsp;
                 
+                <div id="erasebutton">
+			      <input type="button" id="erase" value="지우개">
+			    </div>  
+                &nbsp;
+                 
 				<input type="color" id="color" value="Color">
-				
+				&nbsp;
+				 
 				<div id="buttons">
 			      <input type="button" id="clear" value="전체지우기">
 			    </div>  
