@@ -89,7 +89,7 @@
   .overlay-content {
     position: relative;
     top: 25%;
-    width: 20%;
+    width: 10ch;
     text-align: center;
     margin-top: 30px;
     margin: auto;
@@ -126,7 +126,7 @@
     <div id="myNav" class="overlay">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
       <div class="overlay-content">
-        <a href="http://ksm.gudi.kr/mouse_hole/draw">그리기</a>
+        <a href="#">그리기</a>
         <a href="#">로그아웃</a>
         
       </div>

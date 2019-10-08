@@ -4,8 +4,8 @@ var points=new Array(),
     colorInput = document.getElementById("color");
 
 		function start(e){
-		  var mouseX = e.pageX - canvas.offsetLeft;
-		  var mouseY = e.pageY - canvas.offsetTop;
+		  var mouseX = e.pageX - canvas.offsetLeft - 25;
+		  var mouseY = e.pageY - canvas.offsetTop - 25;
 		  var dot = 1;
 		  $('#dot').bind('change', function(){dot = $('#dot').val();});
 		  paint = true;
@@ -15,20 +15,28 @@ var points=new Array(),
 		};
 
 		function draw(e){
+			ctx.lineWidth = dot.value;
+			cnvs.onmousedown = function(e){
+                if(e.button === 0){
+                    isDraw = true;
+                    draw(e);
+                    
+                }
+            }
 
 		  if(paint){
-			 var mouseX = e.pageX - canvas.offsetLeft;
-			 var mouseY = e.pageY - canvas.offsetTop; 
+			  
+			 var mouseX = e.pageX - canvas.offsetLeft - 25;
+			 var mouseY = e.pageY - canvas.offsetTop - 25; 
 			 ctx.lineTo(mouseX,mouseY);
-			 ctx.stroke();	
+			 
 			 ctx.strokeStyle = colorInput.value;
 			 ctx.lineJoin = join.value;
 			 ctx.lineCap = cap.value;
+			 ctx.stroke();	
 			 
-			 
-			 ctx.lineWidth = dot.value;
 			 ctx.fillRect(e.offsetX, e.offsetY, dot, dot);
-
+			 
 			 points[points.length]=[mouseX,mouseY];
 		  }
 		  
