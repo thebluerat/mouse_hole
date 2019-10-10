@@ -1,13 +1,4 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%
-	request.setCharacterEncoding("utf-8");
-	String imgUrl = request.getParameter("imgUrl");
-	
-	System.out.println(imgUrl);
-	
-	
-
-%>
 <!DOCTYPE html>
 <html lang="ko"></html>
 <html>
@@ -91,7 +82,9 @@
 				 
 				<div id="buttons">
 			      <input type="button" id="clear" value="전체지우기">
-			    </div>  
+			    </div>
+			    
+			    <a id="download" download="myImage.png" href="" onclick="download_img(this);">Download to myImage.png</a>
         </div>
     </div>
         

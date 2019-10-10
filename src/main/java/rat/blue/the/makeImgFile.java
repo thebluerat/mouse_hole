@@ -1,3 +1,5 @@
+//¹ö·ÁÁü
+
 package rat.blue.the;
 
 import java.awt.image.BufferedImage;

@@ -64,6 +64,11 @@ var points=new Array(),
 			ctx.globalCompositeOperation = "source-over";
 	      }, false);
 		
+		download_img = function(el) {
+			var image = canvas.toDataURL("image/png, 1");
+			el.href = image;
+		}
+		
 		var paint=false;
 		var canvas = document.getElementById('cnvs');
 		var ctx=canvas.getContext("2d");
