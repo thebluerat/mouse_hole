@@ -1,7 +1,5 @@
 html, body { margin: 0; padding: 0;}
 
-
-
 .frame {
     background-color: rgb(50, 57, 95);
     margin: auto;
@@ -54,7 +52,60 @@ html, body { margin: 0; padding: 0;}
     width: 100%;
     height: 80vh;
     position: relative;
-    
+}
+
+.standingmouse {
+	position: absolute;
+	width: 100px;
+	height: auto;
+	bottom: -5%;
+	right: 300px;
+	z-index: 3;
+}
+
+.filebutton {
+	position: absolute;
+	width: 100px;
+	height: 180px;
+	bottom: -5%;
+	right: 300px;
+	border: none;
+	cursor: pointer;
+	opacity:0;
+	filter: alpha(opacity=0);
+	z-index: 4;
+}
+
+.mp {
+	position: absolute;
+	background-color: white;
+	right: 30px;
+	bottom: 5%;
+	z-index: 4;
+}
+
+#parallelogram {
+    width: 50px;
+    height: 200px;
+    transform: skew(20deg);
+    background: #81553a;
+    float: left;
+    position: absolute;
+    right: 80px;
+	bottom: -3%;
+	z-index: 3;
+}
+
+#parallelogram2 {
+    width: 50px;
+    height: 200px;
+    transform: skew(-20deg);
+    background: #81553a;
+    float: left;
+    position: absolute;
+    right: 130px;
+	bottom: -3%;
+	z-index: 3;
 }
 
 .floor {

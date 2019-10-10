@@ -49,6 +49,16 @@ var points=new Array(),
 	        ctx.clearRect(0, 0, canvas.width, canvas.height);
 	    }
 		
+		//이미지 다른 캔버스에 출력하려고 했었음
+//		function image(){
+//			var aimg = new Image();
+//			aimg.addEventListener('load', function(){
+//				var imaged = document.getElementById('masterpiece').getContext("2d");
+//				imaged.drawImage(aimg, 0, 0, 200, 200);
+//			}, false);
+//			aimg.src="myimage";
+//		}
+		
 		document.getElementById('clear').addEventListener('click', function() {
 	        ctx.clearRect(0, 0, canvas.width, canvas.height);
 	      }, false);
@@ -68,6 +78,13 @@ var points=new Array(),
 			var image = canvas.toDataURL("image/png, 1");
 			el.href = image;
 		}
+
+		// 작업 이미지 로컬 다운로드(.PNG) 
+//		function downloadCanvas(link, canvasId, filename) { 
+//		link.href = document.getElementById(canvasId).toDataURL();
+//		 link.download = filename; 
+//		}
+
 		
 		var paint=false;
 		var canvas = document.getElementById('cnvs');

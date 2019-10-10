@@ -22,7 +22,7 @@
     
     <body>
         <div class = "wholeframe">
-            <canvas id = "cnvs" class = "mousecanvas" width ="800" height = "800">마음의 창이 더러워서 캔버스가 보이지 않네요..</canvas>
+            <canvas id = "cnvs" class = "mousecanvas" oncontextmenu="return false" width ="800" height = "800">마음의 창이 더러워서 캔버스가 보이지 않네요..</canvas>
             
             <div>
             		두께
@@ -84,7 +84,16 @@
 			      <input type="button" id="clear" value="전체지우기">
 			    </div>
 			    
-			    <a id="download" download="myImage.png" href="" onclick="download_img(this);">Download to myImage.png</a>
+			    <a id="downloadlink" download="myimage.jpg" href="" onclick="download_img(this);">Download as image</a>
+			    
+			    
+			<!-- <ul class="contextmenu">
+			  <li><a href="#">Simple link</a></li>
+			  <li><a href="#">Link to somewhere</a></li>
+			  <li><a href="#">Another link</a></li>
+			  <li><a href="#">Link to nowhere</a></li>
+			  <li><a href="#">Random link</a></li>
+			</ul> -->
         </div>
     </div>
         

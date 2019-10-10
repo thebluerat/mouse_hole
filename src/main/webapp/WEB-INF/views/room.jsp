@@ -11,6 +11,8 @@
     <link href="https://fonts.googleapis.com/css?family=Mansalva&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="./resources/js/snow2.js"></script>
+    <script src="./resources/js/room.js"></script>
+    
     
     
         
@@ -26,7 +28,14 @@
         </script>
 </head>
 <body>
+
     <div class = "wall">
+    	
+    	<input type = "file" class = "filebutton" id = "inputfile" onchange = "handleImageView(this.files)">
+    	<img src="./resources/img/standingmouse.png" class = "standingmouse">
+    	<canvas id="masterpiece" class="mp" height="200" width="200"><img src="myimage" alt="완성작"></canvas>
+    	<div id = "parallelogram2"></div>  
+        <div id = "parallelogram"></div>
 
         <div class = "front">
             <div onclick="openNav()" class = "triangle-down">
