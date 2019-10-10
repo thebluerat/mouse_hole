@@ -89,7 +89,7 @@
   .overlay-content {
     position: relative;
     top: 25%;
-    width: 10ch;
+    width: 20ch;
     text-align: center;
     margin-top: 30px;
     margin: auto;
@@ -99,7 +99,7 @@
   .overlay a {
     padding: 8px;
     text-decoration: none;
-    font-size: 15px;
+    font-size: 2rem;
     margin: auto;
     color: #818181;
     display: block;
@@ -112,9 +112,9 @@
   
   .overlay .closebtn {
     position: absolute;
-    top: 20px;
-    right: 45px;
-    font-size: 60px;
+    top: 3%;
+    right: 4%;
+    font-size: 3rem;
   }
   
   

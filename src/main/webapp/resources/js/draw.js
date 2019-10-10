@@ -15,18 +15,15 @@ var points=new Array(),
 		};
 
 		function draw(e){
-			
 			ctx.lineWidth = dot.value;
 			cnvs.onmousedown = function(e){
                 if(e.button === 0){
                     isDraw = true;
                     draw(e);
-                    
                 }
             }
 
 		  if(paint){
-			  
 			 var mouseX = e.pageX - canvas.offsetLeft - 25;
 			 var mouseY = e.pageY - canvas.offsetTop - 25; 
 			 ctx.lineTo(mouseX,mouseY);
@@ -40,7 +37,6 @@ var points=new Array(),
 			 
 			 points[points.length]=[mouseX,mouseY];
 		  }
-		  
 		}
 		function stop(e){
 		  paint=false;
@@ -57,16 +53,24 @@ var points=new Array(),
 	        ctx.clearRect(0, 0, canvas.width, canvas.height);
 	      }, false);
 		
+		document.getElementById('erase').addEventListener('click', function() {
+			 ctx.globalCompositeOperation = "destination-out";
+             ctx.arc(x2, y2,10/2,0,Math.PI*2,false);
+             ctx.fillStyle = color;
+             ctx.fill();
+	      }, false);
+		
+		document.getElementById('color').addEventListener('click', function() {
+			ctx.globalCompositeOperation = "source-over";
+	      }, false);
+		
 		var paint=false;
 		var canvas = document.getElementById('cnvs');
 		var ctx=canvas.getContext("2d");
-		
+	
 		canvas.addEventListener('mousedown',start);
 		canvas.addEventListener('mousemove',draw);
 		canvas.addEventListener('mouseup',stop);
-		
-		
-
 }
 	
 		
