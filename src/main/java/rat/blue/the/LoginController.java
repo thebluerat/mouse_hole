@@ -1,12 +1,18 @@
 package rat.blue.the;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.net.URLEncoder;
 import java.util.HashMap;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -75,6 +81,7 @@ public class LoginController {
 			System.out.println(resultMap);
 			String access_token = resultMap.get("access_token").toString();
 			
+			
 			String userUrl = "https://kapi.kakao.com/v2/user/me";
 			userUrl += "?access_token=" + access_token;
 			resultMap = HttpUtil.getUrl(userUrl);
@@ -82,11 +89,13 @@ public class LoginController {
 			
 			model.addAttribute("access_token", access_token);
 			model.addAttribute("user", resultMap);
+			
+			HttpSession hs = req.getSession();
 				
 			} catch (UnsupportedEncodingException e) {
 				e.printStackTrace();
 			} 
-			return "main";
+			return "redirect:/room";
 		}
 	}
 

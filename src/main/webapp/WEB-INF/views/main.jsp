@@ -12,7 +12,6 @@
         <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
         <script src="./resources/js/snow.js"></script>
 
-        
         <script>
             $(document).ready(function() {
                 snowinit();
@@ -30,7 +29,6 @@
                 <img src = "./resources/img/bluemouse2.png" alt = "mouseimage" class = "bluemouse">
                 <button type = "button" class = "loginbutton" onclick = "location.href = 'login'">LOGIN</button>
             </div>
-        
         
         <div class = "footer">Come In</div>
         

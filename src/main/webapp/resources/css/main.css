@@ -39,7 +39,6 @@ html, body { margin: 0; padding: 0;}
     margin: auto;   
     font-variant: small-caps;
     text-align: center;
-    
 }
 
 canvas {
@@ -49,7 +48,6 @@ canvas {
     height:640px; 
     top:59%;
     left:50%; 
-   
     background: linear-gradient( to top, white, #242e05 );
 }
 
@@ -96,13 +94,9 @@ canvas {
     animation-duration: 1s;
     -webkit-animation-fill-mode:both;
     animation-fill-mode:both;
-    
   }
 
-
-
 .footer {
-    
     float: left;
     left: 0;
     bottom: 0;
@@ -120,7 +114,6 @@ canvas {
     25% {color: rgb(20, 20, 180);}
     50% {color: rgb(219, 219, 90);}
     75% {color: green;}
-    
     100%{color: black;}
 }
 

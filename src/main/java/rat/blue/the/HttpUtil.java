@@ -8,6 +8,8 @@ import java.net.URL;
 import java.util.HashMap;
 import java.util.Iterator;
 
+import javax.servlet.http.HttpSession;
+
 import net.sf.json.JSONObject;
 
 public class HttpUtil {
@@ -37,7 +39,6 @@ public class HttpUtil {
 					String value = jObject.getString(key);
 					resultMap.put(key, value);
 				}
-				
 				input.close();
 			}
 		} catch (Exception e) {
@@ -77,6 +78,4 @@ public class HttpUtil {
 		}
 		return resultMap;
 	}
-
-
 }

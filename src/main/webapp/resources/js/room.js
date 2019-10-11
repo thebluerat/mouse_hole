@@ -18,3 +18,8 @@
 	 		
 	 		reader.readAsDataURL(file);
 	 	}
+	
+	function Logout(){
+		Kakao.Auth.logout();
+		location.href = "logout.php"
+	}

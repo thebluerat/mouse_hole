@@ -135,8 +135,8 @@
     <div id="myNav" class="overlay">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
       <div class="overlay-content">
-        <a href="#">그리기</a>
-        <a href="#">로그아웃</a>
+        <a href="http://ksm.gudi.kr/mouse_hole/draw">그리기</a>
+        <a href="#" title="로그아웃" onclick="Logout(); return false;">로그아웃</a>
         
       </div>
     </div>
