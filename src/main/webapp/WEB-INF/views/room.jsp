@@ -67,6 +67,7 @@
                 </div>
 
                 <img src = "./resources/img/sleepingmouse.png" alt = "sleepingmouse" class = "mouse">
+                <img src = "./resources/img/smallsleepingmouse.png" alt = "sleepingmouse" class = "smallmouse">
 
         </div>
         
@@ -135,8 +136,8 @@
     <div id="myNav" class="overlay">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
       <div class="overlay-content">
-        <a href="http://ksm.gudi.kr/mouse_hole/draw">그리기</a>
-        <a href="#" title="로그아웃" onclick="Logout(); return false;">로그아웃</a>
+        <a href="http://ksm.gudi.kr/draw">그리기</a>
+        <a href="http://ksm.gudi.kr" title="로그아웃" onclick="Logout(); return false;">로그아웃</a>
         
       </div>
     </div>

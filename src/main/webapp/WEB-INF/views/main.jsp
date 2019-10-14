@@ -9,6 +9,7 @@
         <title>그림 게시판</title>
         <link rel="stylesheet" href = "./resources/css/main.css">
         <link href="https://fonts.googleapis.com/css?family=Mansalva&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Fascinate+Inline&display=swap" rel="stylesheet">
         <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
         <script src="./resources/js/snow.js"></script>
 
@@ -24,9 +25,13 @@
     
     <body>
         <div class = "subject"></div>
+        
         <canvas id="canvas"></canvas>
+        <img src = "./resources/img/mouse.png" alt = "mouseimage2" class = "shakingmouse">
+        <button type = "button" class = "loginbutton2" onclick = "location.href = 'login'">LOGIN</button>
             <div class = "login">
                 <img src = "./resources/img/bluemouse2.png" alt = "mouseimage" class = "bluemouse">
+                
                 <button type = "button" class = "loginbutton" onclick = "location.href = 'login'">LOGIN</button>
             </div>
         

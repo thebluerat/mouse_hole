@@ -17,6 +17,16 @@ html, body { margin: 0; padding: 0;}
     height: 350px;
 }
 
+.shakingmouse {
+	display: none;
+	width: 70%;
+	height: auto;
+	z-index: 5;
+	position: absolute;
+	left: 50%; transform: translateX(-50%);
+	top: 10%;
+}
+
 .back {
     background-color: white;
     width: 100%;
@@ -69,6 +79,22 @@ canvas {
     animation-duration: 4s;
 }
 
+.loginbutton2 {
+	position: absolute;
+	left: 50%; transform: translateX(-50%);
+	font-family: "Mansalva";
+	diplay: none;
+	font-family: "Fascinate Inline", cursive;
+	font-size: 20px;
+	background-color: transparent !important;
+    background-image: none !important;
+    border-color: transparent;
+    border: none;
+    top: 500px;
+    color: #0080ff;
+    cursor: pointer;
+}
+
 
 @keyframes smaller {
     0%   {color: green;}
@@ -115,5 +141,57 @@ canvas {
     50% {color: rgb(219, 219, 90);}
     75% {color: green;}
     100%{color: black;}
+}
+
+@media screen and (max-width: 600px) {
+	.bluemouse {
+		display: none;
+	}
+	
+	.shakingmouse {
+		display: inline-block;
+		
+	}
+	
+	.login {
+		display: none;
+	}
+	
+	.loginbutton2{
+		display: inline-block;
+	}
+	
+	.footer {
+		display: none;
+	}
+	
+	.subject {
+		display: none;
+	}
+	
+	canvas {
+		height: 100%;
+    	width: auto;	
+		background: linear-gradient( to top, white, #ff99bb );
+	}
+	
+	img:hover {
+	  animation: shake 0.5s;
+	  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% { transform: translate(-51%, 1px) rotate(0deg); }
+  10% { transform: translate(-51%, -2px) rotate(-1deg); }
+  20% { transform: translate(-53%, 0px) rotate(1deg); }
+  30% { transform: translate(-47%, 2px) rotate(0deg); }
+  40% { transform: translate(-48%, -1px) rotate(1deg); }
+  50% { transform: translate(-51%, 2px) rotate(-1deg); }
+  60% { transform: translate(-53%, 1px) rotate(0deg); }
+  70% { transform: translate(-47%, 1px) rotate(-1deg); }
+  80% { transform: translate(-51%, -1px) rotate(1deg); }
+  90% { transform: translate(-49%, 2px) rotate(0deg); }
+  100% { transform: translate(-49%, -2px) rotate(-1deg); }
+}
 }
 

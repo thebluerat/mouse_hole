@@ -20,7 +20,6 @@ html, body { margin: 0; padding: 0;}
     border-top-left-radius: 800px;
     border-top-right-radius: 800px;
     position: relative;
-    
 }
 
 .outside {
@@ -30,7 +29,6 @@ html, body { margin: 0; padding: 0;}
     margin: auto;
     position: relative;
     top: 4%;
-    
 }
 
 #canvas2 {
@@ -56,11 +54,11 @@ html, body { margin: 0; padding: 0;}
 
 .standingmouse {
 	position: absolute;
-	width: 5%;
+	width: 100px;
 	height: auto;
 	bottom: -5%;
 	right: 300px;
-	z-index: 3;
+	z-index: 6;
 }
 
 .filebutton {
@@ -73,7 +71,7 @@ html, body { margin: 0; padding: 0;}
 	cursor: pointer;
 	opacity:0;
 	filter: alpha(opacity=0);
-	z-index: 4;
+	z-index: 7;
 }
 
 .mp {
@@ -81,7 +79,7 @@ html, body { margin: 0; padding: 0;}
 	background-color: white;
 	right: 30px;
 	bottom: 5%;
-	z-index: 4;
+	z-index: 6;
 }
 
 #parallelogram {
@@ -128,6 +126,21 @@ html, body { margin: 0; padding: 0;}
     z-index: 8;
 }
 
+.smallmouse {
+    position:absolute;
+    bottom: -30px;
+    left: 7%;
+    max-width: 400px;
+    min-width: 50px;
+    max-height: 320px;
+    width: auto;
+    height: 10%;
+    margin-right: 500px;
+    overflow: hidden !important;
+    z-index: 8;
+    display: none !important;
+}
+
 /* .curtain {
     cursor: pointer;
     background-color: black;
@@ -148,7 +161,6 @@ html, body { margin: 0; padding: 0;}
     left: 28%;
     top: 20%;
     z-index: 5;
-    
 }
 
 .triangle-up {
@@ -188,3 +200,45 @@ html, body { margin: 0; padding: 0;}
     border-radius: 50%;
     display: inline-block;
   } */
+  
+  
+  @media screen and (max-height: 600px){
+  	.mouse {
+  		display: none;
+  	}
+  	.smallmouse {
+  		display: inline-block;
+  	}
+  }
+  
+  @media screen and (max-width: 600px){
+	  	.overlay-content {
+	  		width: 100%!important;
+	  	}
+	  	.overlay a {
+	  		padding: 0px !important;
+	  		font-size: 1rem!important;
+	  	}
+  }
+  
+  @media screen and (max-height: 400px){
+  	.smallmouse {
+  		bottom: -20px;
+  	}
+  }
+  
+  @media screen and (max-height: 100px){
+  	.smallmouse {
+  		bottom: -10px;
+  	}
+  	
+    @media screen and (max-height: 50px){
+  	.smallmouse {
+  		bottom: 0px;
+  	}
+  	
+  	@media screen and (max-height: 20px){
+  	.smallmouse {
+  		display: none;
+  	}
+  }

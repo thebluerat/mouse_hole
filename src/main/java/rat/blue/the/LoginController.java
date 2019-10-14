@@ -53,7 +53,7 @@ public class LoginController {
 			String url = "https://accounts.kakao.com/login?continue=";
 			String url2 = "https://kauth.kakao.com/oauth/authorize";
 			url2 += "?client_id=79bbdf8e5a20d21e5549bb13fb8e44de";
-			url2 += "&redirect_uri=http://ksm.gudi.kr/mouse_hole/hi";
+			url2 += "&redirect_uri=http://ksm.gudi.kr/hi";
 			url2 += "&response_type=code";
 			url += URLEncoder.encode(url2, "UTF-8");
 			System.out.println(url);
@@ -74,7 +74,7 @@ public class LoginController {
 			System.out.println(code);
 			String url = "https://kauth.kakao.com/oauth/token";
 			url += "?client_id=79bbdf8e5a20d21e5549bb13fb8e44de&redirect_uri=";
-			url	+= URLEncoder.encode("http://ksm.gudi.kr/mouse_hole/hi", "UTF-8");
+			url	+= URLEncoder.encode("http://ksm.gudi.kr/hi", "UTF-8");
 			url	+= "&code=" + code;
 			url += "&grant_type=authorization_code";
 			resultMap = HttpUtil.getUrl(url);

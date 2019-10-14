@@ -84,7 +84,7 @@
 			      <input type="button" id="clear" value="전체지우기">
 			    </div>
 			    
-			    <a id="downloadlink" download="myimage.jpg" href="" onclick="download_img(this);">Download as image</a>
+			    <a id="downloadlink" download="masterpiece.jpg" href="" onclick="download_img(this);">Download as image</a>
 			    
 			    
 			<!-- <ul class="contextmenu">
